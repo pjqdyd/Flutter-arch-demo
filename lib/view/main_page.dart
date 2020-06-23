@@ -1,4 +1,8 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:dio/dio.dart';
+import 'package:flutter_arch_demo/utils/http.dart';
 import 'package:flutter_arch_demo/widget/default_appbar.dart';
 
 //首页
@@ -10,6 +14,7 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
