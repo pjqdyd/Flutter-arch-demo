@@ -11,6 +11,7 @@ lib
  ├─view                 页面组件的存放目录
  ├─provider             provider状态管理
  ├─utils                工具类目录
+ ├─router               路由目录
  ├─widget               全局公用组件目录
  └─main.dart            main.dart入口主类
 

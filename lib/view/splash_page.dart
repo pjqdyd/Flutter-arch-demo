@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_arch_demo/router/Routers.dart';
 
 // 启动页
 class SplashPage extends StatefulWidget {
@@ -14,7 +15,7 @@ class _SplashPageState extends State<SplashPage> {
   void initState() { 
     super.initState();
     Future.delayed(Duration(seconds: 2), (){
-
+      Navigator.of(context).pushNamed(Routers.main_page, arguments: {}); //跳转到首页
     });
   }
 
