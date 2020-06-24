@@ -1,7 +1,7 @@
 ## flutter_arch_demo Flutter的基础项目架构
 
 ### 开发环境:
-  > Flutter v1.12.13<br>
+  > Flutter v1.17.4<br>
 
 ### 项目结构:
 ```

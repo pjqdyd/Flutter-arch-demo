@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter_arch_demo/model/MainModel.dart';
@@ -27,7 +28,7 @@ class _MainPageState extends State<MainPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-
+              CachedNetworkImage(imageUrl: "https://upload-images.jianshu.io/upload_images/14511997-00f42c82c1fa0b27.jpg"),
               ProviderWidget<MainViewModel>(
                 viewModel: MainViewModel(),
                 onReady: (viewModel){ //组件初始化之后
