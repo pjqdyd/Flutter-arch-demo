@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:flutter_arch_demo/common/Urls.dart';
 
 //定义成功, 失败, After的回调函数
 typedef Success = void Function(dynamic json);
@@ -25,7 +26,7 @@ class Http {
       connectTimeout: 30000,
       receiveTimeout: 30000,
       sendTimeout: 30000,
-      baseUrl: "",
+      baseUrl: Urls.baseUrl,
       responseType: ResponseType.json,
     ));
     return dio;
