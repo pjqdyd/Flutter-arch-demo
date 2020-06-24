@@ -1,16 +1,26 @@
-# flutter_arch_demo
+# flutter_arch_demo Flutter的基础项目架构
 
-A new Flutter project.
+### 开发环境:
+  > Flutter v1.12.13<br>
 
-## Getting Started
+### 项目结构:
+```
+lib
+ ├─common               通用common类
+ ├─model                各个页面的数据模型实体类对象
+ ├─view                 页面组件的存放目录
+ ├─provider             provider状态管理
+ ├─utils                工具类目录
+ ├─widget               全局公用组件目录
+ └─main.dart            main.dart入口主类
 
-This project is a starting point for a Flutter application.
+```
 
-A few resources to get you started if this is your first Flutter project:
+### 如何运行:
+   1. 确保安装好FlutterSdk开发环境,cmd查看命令`flutter doctor`.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+   2. 在项目根目录下运行`flutter pub get`下载依赖包.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+   3. 连接好设备后, 在项目目录下运行`flutter run`即可.
+
+   (参考: [flutter中文网](https://flutterchina.club/get-started/install/))
