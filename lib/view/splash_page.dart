@@ -15,7 +15,7 @@ class _SplashPageState extends State<SplashPage> {
   void initState() { 
     super.initState();
     Future.delayed(Duration(seconds: 2), (){
-      Navigator.of(context).pushNamed(Routers.main_page, arguments: {}); //跳转到首页
+      Navigator.of(context).pushReplacementNamed(Routers.main_page, arguments: {}); //跳转到首页
     });
   }
 
