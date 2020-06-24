@@ -28,7 +28,6 @@ class _MainPageState extends State<MainPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              CachedNetworkImage(imageUrl: "https://upload-images.jianshu.io/upload_images/14511997-00f42c82c1fa0b27.jpg"),
               ProviderWidget<MainViewModel>(
                 viewModel: MainViewModel(),
                 onReady: (viewModel){ //组件初始化之后
@@ -57,7 +56,7 @@ class _MainPageState extends State<MainPage> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Text(mainModel.title), //标题
-          Image.network(mainModel.image, height: 100, fit: BoxFit.fill,),
+          CachedNetworkImage(imageUrl: mainModel.image, height: 100, fit: BoxFit.fill,), //图片
           ListView.builder(
             padding: EdgeInsets.all(30),
             scrollDirection: Axis.vertical,
@@ -67,7 +66,11 @@ class _MainPageState extends State<MainPage> {
             itemBuilder: (context, index){
               var subject =  mainModel.list[index];
               return ListTile(
-                leading: Image.network(subject.image, fit: BoxFit.fill,), //图片图标
+                leading: CachedNetworkImage(
+                    imageUrl: subject.image,
+                    placeholder: (context, url) => Icon(Icons.image), //占位组件
+                    errorWidget: (context, url, error) => Icon(Icons.error), //出错
+                ),
                 title: Text(subject.id.toString()),
                 subtitle: Text(subject.name),
                 trailing: Icon(Icons.school), //设置后置图标
