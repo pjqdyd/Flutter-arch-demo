@@ -31,7 +31,9 @@ class _MainPageState extends State<MainPage> {
               ProviderWidget<MainViewModel>(
                 viewModel: MainViewModel(),
                 onReady: (viewModel){ //组件初始化之后
-                  viewModel.loadData(); //通过provider调用viewModel加载数据
+                  //调用viewModel(这里就是泛型MianViewModel)的loadData加载数据, 这样数据会通过notifyListeners()通知变化;
+                  //这样由于ProviderWidget封装了监听和消费通知, 就会回调下面的builder,重新构建数据
+                  viewModel.loadData(); 
                 },
                 builder: (context, viewModel, child){
                   return _buildMainWidget(viewModel.mainModel); //渲染首页组件, 传入数据

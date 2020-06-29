@@ -36,7 +36,7 @@ class _ProviderWidgetState<T extends ChangeNotifier> extends State<ProviderWidge
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider<T>( //监听viewModel的更新
+    return ChangeNotifierProvider<T>( //监听T viewModel的更新
       create: (_) => widget.viewModel,
       child: Consumer(
           builder: widget.builder, //消费通知, 调用builder方法
